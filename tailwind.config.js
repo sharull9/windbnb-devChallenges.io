@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./Components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -13,7 +13,7 @@ module.exports = {
       },
       spacing: {
         half: "0.5rem",
-        30: "1.875rem"
+        30: "1.875rem",
       },
       width: {
         input: "5.625rem",
