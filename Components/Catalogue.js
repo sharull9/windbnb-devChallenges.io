@@ -13,10 +13,10 @@ function Catalogue() {
   return (
     <div>
       <div className="flex justify-between">
-        <p className="text-[18px] font-semibold">
+        <p className="text-lg font-semibold">
           Stays in {hotels[0]?.country}
         </p>
-        <p className="text-[14px] text-[#4F4F4F] flex justify-center items-center">
+        <p className="text-sm text-light-gray flex justify-center items-center">
           {hotels.length}+ stays
         </p>
       </div>
