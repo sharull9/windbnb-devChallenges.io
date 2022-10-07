@@ -40,7 +40,7 @@ function Header() {
         </div>
       </div>
       <div className="px-5">
-        <Catalogue query={location, guest} />
+        <Catalogue location={location} />
       </div>
     </>
   );
