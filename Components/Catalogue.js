@@ -8,7 +8,6 @@ function Catalogue({location, guest}) {
       .then((res) => res.json())
       .then((data) => setHotels(data));
   }, []);
-  console.log(hotels.filter((hotel)=> hotel.city.toLowerCase().includes(location)));
 
   return (
     <div>
@@ -22,7 +21,7 @@ function Catalogue({location, guest}) {
       </div>
       {/* <div className="grid grid-cols-1 md:grid-cols-3 items-start"> */}
       <div className="flex flex-wrap items-start">
-        {hotels?.filter((hotel)=> hotel.city.toLowerCase().includes(location)).map((hotel, id) => (
+        {hotels?.filter((hotel)=> hotel.city.toLowerCase().includes(location.toLowerCase())).map((hotel, id) => (
           <Card
             key={id}
             imageUrl={hotel.photo}
