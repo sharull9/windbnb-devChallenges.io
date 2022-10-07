@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import SearchIcon from "@mui/icons-material/Search";
+import { useState } from "react";
 import Link from "next/link";
 import Catalogue from "./Catalogue";
+import { Search } from "@mui/icons-material";
 // import { Search } from "@mui/icons-material";
 
 function Header() {
@@ -35,12 +35,11 @@ function Header() {
             className="w-input focus:outline-none"
             placeholder="Add guests"
           />
-          {/* <Search /> */}
-          <SearchIcon sx={{ color: "red" }} />
+          <Search sx={{ color: "red" }} />
         </div>
       </div>
       <div className="px-5">
-        <Catalogue location={location} />
+        <Catalogue location={location} guest={guest} />
       </div>
     </>
   );
