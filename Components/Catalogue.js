@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
-function Catalogue() {
+function Catalogue({location, guest}) {
   const [hotels, setHotels] = useState([]);
   useEffect(() => {
     fetch("/api/hotel")
       .then((res) => res.json())
       .then((data) => setHotels(data));
   }, []);
-  console.log(hotels.filter((hotel)=> hotel.city.toLowerCase().includes('hel')));
+  console.log(hotels.filter((hotel)=> hotel.city.toLowerCase().includes(location)));
 
   return (
     <div>
@@ -22,7 +22,7 @@ function Catalogue() {
       </div>
       {/* <div className="grid grid-cols-1 md:grid-cols-3 items-start"> */}
       <div className="flex flex-wrap items-start">
-        {hotels?.map((hotel, id) => (
+        {hotels?.filter((hotel)=> hotel.city.toLowerCase().includes(location)).map((hotel, id) => (
           <Card
             key={id}
             imageUrl={hotel.photo}

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Catalogue from "../Components/Catalogue";
 import Header from "../Components/Header";
 
 export default function Home() {
@@ -12,9 +11,6 @@ export default function Home() {
       </Head>
       <div className="w-full mb-5">
         <Header />
-      </div>
-      <div className="px-5">
-        <Catalogue />
       </div>
     </div>
   );
