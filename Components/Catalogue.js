@@ -8,7 +8,7 @@ function Catalogue() {
       .then((res) => res.json())
       .then((data) => setHotels(data));
   }, []);
-  console.log(hotels.filter((hotel)=> hotel.city.includes('hel')));
+  console.log(hotels.filter((hotel)=> hotel.city.toLowerCase().includes('hel')));
 
   return (
     <div>
